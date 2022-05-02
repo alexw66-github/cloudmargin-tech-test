@@ -1,6 +1,8 @@
-# 
+# using a private AWS account for now, as I don't seem to have access to anything
+# on CloudMargin. Probably me...
+
 provider "aws" {
-  region  = "eu-west-1"
+  region  = "us-east-1"
   profile = "cloudmargin"
 }
 

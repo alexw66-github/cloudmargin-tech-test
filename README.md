@@ -37,4 +37,17 @@ Having used S3 and DynamoDB previously as backing stores, I can reuse those modu
 | Example of using `aws_iam_policy_document` rather than JSON for type safety | https://cloudonaut.io/defining-iam-policies-with-terraform/ |
 | Example of storing `.tfstate` in S3 &amp; DynamoDB | https://stackoverflow.com/questions/47913041/initial-setup-of-terraform-backend-using-terraform |
 
+---
+
+## Working Notes / Issues
+
+1. Seems I'm unable to create anything on the specified AWS account (access denied). Will revert to a personal account for now.
+
+```
+Error: error creating S3 Bucket (alx-cloudmargin-tfstate): AccessDenied: Access Denied
+status code: 403, request id: S019FNEQ7VDX7DAH, host id: M/4wNvKopOPHGD655DPnBQ1DYusO3HaHh9NNIH18sMSW9PaPJwHNt627XjL6M7F49BORCdBTriY=
+```
+
+---
+
 [^1]: There's a 3 hour time limit, but also because I currently have a casserole on the go...!
