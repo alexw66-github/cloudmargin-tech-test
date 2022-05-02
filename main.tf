@@ -37,3 +37,12 @@ module "security_groups" {
   environment    = var.environment
   container_port = var.container_port
 }
+
+# set up load balancer for the public VPC
+module "alb" {
+  source              = "./alb"
+  vpc_id              = module.vpc.id
+  subnets             = module.vpc.public_subnets
+  environment         = var.environment
+  alb_security_groups = [module.security_groups.alb]
+}
