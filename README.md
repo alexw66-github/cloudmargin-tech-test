@@ -55,4 +55,14 @@ status code: 403, request id: S019FNEQ7VDX7DAH, host id: M/4wNvKopOPHGD655DPnBQ1
 
 ---
 
+## Instructions
+
+1. Run `terraform apply` on the `/prerequisite-setup` folder to set up the backend infrastructure and custom role for the Terraform plan to run-as.
+
+2. Update the `role_arn` setting in `main.tf` within the root folder with the generated role
+
+3. Run `terraform apply` against the root folder.
+
+---
+
 [^1]: There's a 3 hour time limit, but also because I currently have a casserole on the go...!
