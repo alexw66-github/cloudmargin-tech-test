@@ -29,3 +29,11 @@ module "vpc" {
   availability_zones = var.availability_zones
   environment        = var.environment
 }
+
+# wire up the VPCs created above to the security groups below 
+module "security_groups" {
+  source         = "./security-groups"
+  vpc_id         = module.vpc.id
+  environment    = var.environment
+  container_port = var.container_port
+}

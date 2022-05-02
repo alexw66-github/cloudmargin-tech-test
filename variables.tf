@@ -17,3 +17,7 @@ variable "private_subnets" {
 variable "public_subnets" {
   default = ["10.0.16.0/20", "10.0.48.0/20", "10.0.80.0/20"]
 }
+
+variable "container_port" {
+  default = 80
+}
