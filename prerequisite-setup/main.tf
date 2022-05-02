@@ -62,7 +62,7 @@ data "aws_iam_policy_document" "robot_policy" {
 }
 
 resource "aws_iam_role" "robot_role" {
-  name                = "alx-prototype-robot-role"
+  name                = "alx-cloudmargin-robot-role"
   assume_role_policy  = data.aws_iam_policy_document.robot_role.json
   managed_policy_arns = [aws_iam_policy.robot_policy.arn]
 }
