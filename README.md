@@ -14,9 +14,11 @@
 
 ## Plan of Action
 
-I'll be making use of Fargate (in order to use the minimal infrastructure possible). This supports all the features requested and should be easy enough to implement within the 
+Create a workspace called `test` and AWS profile called `cloudmargin`.
 
-Having used S3 and DynamoDB previously as backing stores, I can reuse those modules and adjust for the `eu-west-1` region. These will be created with an independant Terraform plan (under a separate `/prerequisite-setup` folder). I'll create a `robot-role`
+I'll be making use of Fargate (in order to use the minimal infrastructure possible). This supports all the features requested and should be easy enough to implement within the timeframe. I'm more comfortable with using EKS and Kubernetes in my day job, but this scenario doesn't need orchestration so I should have enough konwledge to accomplish the task.
+
+Having used S3 and DynamoDB previously as backing stores, I can reuse those modules and adjust for the `eu-west-1` region. These will be created with an independant Terraform plan (under a separate `/prerequisite-setup` folder). I'll create a `robot-role` for the main Terraform plan to assume.
 
 
 ## Limitations
@@ -24,7 +26,7 @@ Having used S3 and DynamoDB previously as backing stores, I can reuse those modu
 - The role assumed by Terraform will just be a placeholder (i.e. allow `*`), which is obviously not for production
 - AWS infrastructure won't have tags
 - Varibles etc won't have proper descriptions and conditional logic/type checking
-- No container registry, HTTPS, granular security groups, etc.
+- No container registry, HTTPS, granular security groups, logging, etc.
 
 ## References
 
