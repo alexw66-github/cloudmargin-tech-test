@@ -46,3 +46,17 @@ module "alb" {
   environment         = var.environment
   alb_security_groups = [module.security_groups.alb]
 }
+
+# set up Fargate consuming the modules above, running the specified container image
+module "ecs" {
+  source                      = "./ecs"
+  environment                 = var.environment
+  subnets                     = module.vpc.private_subnets
+  aws_alb_target_group_arn    = module.alb.aws_alb_target_group_arn
+  ecs_service_security_groups = [module.security_groups.ecs_tasks]
+  container_port              = var.container_port
+  container_cpu               = var.container_cpu
+  container_memory            = var.container_memory
+  service_desired_count       = var.service_desired_count
+  container_image = var.container_image
+}

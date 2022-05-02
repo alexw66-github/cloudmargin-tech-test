@@ -21,3 +21,19 @@ variable "public_subnets" {
 variable "container_port" {
   default = 80
 }
+
+variable "container_image" {
+  default = "nginx"
+}
+
+variable "service_desired_count" {
+  default = 2
+}
+
+variable "container_cpu" {
+  default = 256 # .25 vCPU
+}
+
+variable "container_memory" {
+  default = 512 # 0.5 GB
+}
