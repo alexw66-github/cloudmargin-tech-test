@@ -48,6 +48,11 @@ Error: error creating S3 Bucket (alx-cloudmargin-tfstate): AccessDenied: Access 
 status code: 403, request id: S019FNEQ7VDX7DAH, host id: M/4wNvKopOPHGD655DPnBQ1DYusO3HaHh9NNIH18sMSW9PaPJwHNt627XjL6M7F49BORCdBTriY=
 ```
 
+2. Configured to a personal AWS account (692640583927) on the `us-east-1` region, we have `nginx` available on: http://test-load-balancer-534419352.us-east-1.elb.amazonaws.com/
+
+
+![nginx](nginx.png)
+
 ---
 
 [^1]: There's a 3 hour time limit, but also because I currently have a casserole on the go...!
